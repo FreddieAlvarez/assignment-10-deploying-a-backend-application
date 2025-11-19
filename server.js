@@ -336,6 +336,14 @@ app.use((err, req, res, next) => {
     });
 });
 
+app.get('/api/info', (req, res) => {
+    res.json({
+        message: "Updated Task API",
+        version: "1.0.1",
+        status: "Auto-deploy test successful"
+    });
+});
+
 // 404 handler
 app.use((req, res) => {
     res.status(404).json({ 
